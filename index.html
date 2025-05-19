@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vocabularium</title>
+  <link rel="icon" type="image/png" href="https://github.com/sergiossmm/vocabularium/raw/main/vocabularium.png" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -19,24 +21,44 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #00796b;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-    }
+ header {
+  background: #00796b;
+  color: white;
+  padding: 0rem 1rem;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30%;
+  top: 0;
+  z-index: 1000;
+  text-align: left; /* Para que el texto quede alineado a la izquierda */
+}
+
+header img.logo {
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+  flex-shrink: 0; /* Evita que el logo se reduzca */
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+}
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0;
     }
 
     .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-    padding-top: 200px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      padding-top: 240px; /* Ajustado por header fijo con menor padding */
     }
 
     .section {
@@ -98,11 +120,45 @@
       color: #777;
       font-size: 0.9rem;
     }
+    .text-small {
+  display: none; /* oculto por defecto */
+}
 
     @media (max-width: 768px) {
-      .levels {
+       .text-large {
+    display: none; /* oculto en móvil */
+  }
+  .text-small {
+    display: block; /* muestro en móvil */
+  }
+        .levels {
         flex-direction: column;
       }
+
+      header {
+        padding: 1rem;
+    flex-direction: row !important; /* fuerza fila */
+    gap: 1rem;
+    flex-wrap: nowrap !important; /* evita que se envuelvan */
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  header img.logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .header-text {
+    white-space: nowrap; /* evita que el texto se rompa en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* si es muy largo, muestra puntos suspensivos */
+  }
+  .container{
+     padding-top: 140px;
+  }
     }
 
     .contact-info {
@@ -114,27 +170,35 @@
     .contact-info p {
       margin: 0.2rem 0;
     }
-      .download-apk {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  background-color: #43a047;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-.download-apk:hover {
-  background-color: #2e7d32;
-}
+
+    .download-apk {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background-color: #43a047;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .download-apk:hover {
+      background-color: #2e7d32;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Vocabularium</h1>
-    <p>¡Aprende inglés de forma divertida, rápida y efectiva!</p>
-  </header>
+  <img src="https://github.com/sergiossmm/vocabularium/raw/main/vocabularium.png" alt="Logo Vocabularium" class="logo" height="450px" />
+  <div class="header-text">
+    <h1 class="text-large">Vocabularium</h1>
+  <p class="text-large">¡Aprende inglés de forma divertida, rápida y efectiva!</p>
+
+  <h1 class="text-small">Vocabularium</h1>
+  <p class="text-small">¡Aprende inglés de forma divertida,<br>rápida y efectiva!</p>
+  </div>
+</header>
 
   <div class="container">
     <section class="section">
@@ -162,12 +226,11 @@
     </section>
 
     <section class="section">
-  <h2>¿Quién soy?</h2>
-  <p>Mi nombre es <strong>Sergio</strong> y soy el creador de Vocabularium. Desde siempre he sentido una gran pasión por los idiomas y la tecnología, lo que me motivó a crear esta aplicación para ayudar a personas de todas las edades a aprender inglés de manera sencilla, entretenida y accesible.</p>
-  <p>Con Vocabularium, mi objetivo es ofrecer una herramienta moderna que combine juegos, ejercicios interactivos y recursos útiles para que aprender inglés deje de ser una tarea difícil y se convierta en una experiencia divertida y motivadora.</p>
-  <p>¡Gracias por confiar en Vocabularium para tu aprendizaje!</p>
-</section>
-
+      <h2>¿Quién soy?</h2>
+      <p>Mi nombre es <strong>Sergio</strong> y soy el creador de Vocabularium. Desde siempre he sentido una gran pasión por los idiomas y la tecnología, lo que me motivó a crear esta aplicación para ayudar a personas de todas las edades a aprender inglés de manera sencilla, entretenida y accesible.</p>
+      <p>Con Vocabularium, mi objetivo es ofrecer una herramienta moderna que combine juegos, ejercicios interactivos y recursos útiles para que aprender inglés deje de ser una tarea difícil y se convierta en una experiencia divertida y motivadora.</p>
+      <p>¡Gracias por confiar en Vocabularium para tu aprendizaje!</p>
+    </section>
 
     <section class="section">
       <h2>Contacto</h2>
@@ -179,9 +242,9 @@
       </div>
     </section>
 
-   <a class="download-apk" href="https://github.com/sergiossmm/vocabularium/raw/main/vocabularium.apk" download>
-  📲 Descargar APK para Android
-</a>
+    <a class="download-apk" href="https://github.com/sergiossmm/vocabularium/raw/main/vocabularium.apk" download>
+      📲 Descargar APK para Android
+    </a>
   </div>
 
   <footer>
