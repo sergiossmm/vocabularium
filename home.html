@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocabularium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #00796b;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    padding-top: 200px;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00796b;
+    }
+
+    .levels {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .level-card {
+      background: white;
+      flex: 1 1 200px;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .level-card:hover {
+      transform: scale(1.03);
+    }
+
+    .level-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #00796b;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #004d40;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f5f5f5;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .levels {
+        flex-direction: column;
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .contact-info p {
+      margin: 0.2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vocabularium</h1>
+    <p>¡Aprende inglés de forma divertida, rápida y efectiva!</p>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h2>¿Qué encontrarás?</h2>
+      <p>Juegos, vocabulario personalizado, audios y mucho más.</p>
+    </section>
+
+    <section class="section">
+      <h2>Secciones disponibles</h2>
+      <div class="levels">
+        <div class="level-card">
+          <h3>Diccionario</h3>
+          <p>Empieza desde cero. Aprende vocabulario básico y sus descripciones.</p>
+        </div>
+        <div class="level-card">
+          <h3>Juegos</h3>
+          <p>Mejora tu gramática y expresión escrita con diversos juegos interactivos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Tu progreso</h2>
+      <p>Visualiza tus puntos y desbloquea niveles conforme aprendes.</p>
+    </section>
+
+    <section class="section">
+  <h2>¿Quién soy?</h2>
+  <p>Mi nombre es <strong>Sergio</strong> y soy el creador de Vocabularium. Desde siempre he sentido una gran pasión por los idiomas y la tecnología, lo que me motivó a crear esta aplicación para ayudar a personas de todas las edades a aprender inglés de manera sencilla, entretenida y accesible.</p>
+  <p>Con Vocabularium, mi objetivo es ofrecer una herramienta moderna que combine juegos, ejercicios interactivos y recursos útiles para que aprender inglés deje de ser una tarea difícil y se convierta en una experiencia divertida y motivadora.</p>
+  <p>¡Gracias por confiar en Vocabularium para tu aprendizaje!</p>
+</section>
+
+
+    <section class="section">
+      <h2>Contacto</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> vocabulariumm@gmail.com</p>
+        <p><strong>Teléfono:</strong> +34 611 148 369</p>
+        <p><strong>Dirección:</strong> Calle de los Idiomas 123, Valencia, España</p>
+        <p><strong>Horario:</strong> Lunes a Viernes, de 9:00 a 18:00</p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <a href="#">¡Empieza a aprender ahora!</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Vocabularium App. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
